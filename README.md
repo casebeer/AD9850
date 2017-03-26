@@ -34,17 +34,18 @@ The **AD9850** library instantiates a **DDS** object, the user does not need to 
 
 ## Functions : ##
 
-###begin(int w_clk_pin, int fq_ud_pin, int data_pin, int reset_pin)
-#####Description
+### `begin(int w_clk_pin, int fq_ud_pin, int data_pin, int reset_pin)`
+
+##### Description
 Initialize the output pins and master reset the AD9850
-#####Syntax
+##### Syntax
 `DDS.begin(w_clk, fq_ud, data, reset);`
-#####Parameters
+##### Parameters
 **w_clk :** Working clock output pin, any pin *(int)*<br>
 **fq_ud :** Frequency update pin, any pin. *(int)*<br>
 **data  :** Serial data output pin, any pin *(int)*<br>
 **reset :** Reset output pin, any pin. *(int)*
-#####Returns
+##### Returns
 None.
 ##### Example
 
@@ -134,16 +135,16 @@ None.
 DDS.down();
 ```
 
-###up()
-#####Description
+### `up()`
+##### Description
 Wakes-up the AD9850 from power down mode.
-#####Syntax
+##### Syntax
 `DDS.up();`
-#####Parameters
+##### Parameters
 None.
-#####Returns
+##### Returns
 None.
-#####Example
+##### Example
 ```c++
 DDS.down(); // Entering power down mode
 
