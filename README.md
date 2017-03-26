@@ -46,23 +46,34 @@ Initialize the output pins and master reset the AD9850
 **reset :** Reset output pin, any pin. *(int)*
 #####Returns
 None.
-#####Example
+##### Example
+
 ```c++
 void setup(){
  DDS.begin(6, 7, 8, 9);
 }
 ```
-###calibrate(double trim_frequency)
-#####Description
+
+### calibrate(double trim_frequency)
+##### Description
+
 Compensation of crystal oscillator frequency.<br>
 Can be used at any time after initialization.
-#####Syntax
+
+##### Syntax
+
 `DDS.calibrate(trim_freq);`
+
 #####Parameters
+
 **trim_freq :** Adjust around 125000000 to match the real crystal oscillator frequency. *(double)*
-#####Returns
+
+##### Returns
+
 None.
-#####Example
+
+##### Example
+
 ```c++
 void setup(){
  DDS.begin(6, 7, 8, 9);
@@ -72,35 +83,57 @@ void loop(){
  DDS.calibrate(124999000);
 }
 ```
-###setfreq(double frequency, int phase)
-#####Description
+
+### `setfreq(double frequency, int phase)`
+
+##### Description
+
 Sets the output frequency of the AD9850 and the phase of the signal.
-#####Syntax
+
+##### Syntax
+
 `DDS.setfreq(frequency, phase);`
-#####Parameters
+
+##### Parameters
+
 **frequency :** Output frequency in Hz. *(double)*<br>
 **phase :** Sets the phase of the output signal, coded on 5 bits allows 32 phase steps of 11,25° each. *(int)*
-#####Returns
+
+##### Returns
+
 None.
-#####Example
+
+##### Example
+
 ```c++
 double frequency = 10000000;
 int phase = 0;
 DDS.setfreq(frequency, phase);
 ```
-###down()
-#####Description
+
+### `down()`
+
+##### Description
+
 Power down mode reducing the dissipated power from 380mW to 30mW at 5V
-#####Syntax
+
+##### Syntax
+
 `DDS.down();`
-#####Parameters
+
+##### Parameters
+
 None.
-#####Returns
+
+##### Returns
 None.
-#####Example
+
+##### Example
+
 ```c++
 DDS.down();
 ```
+
 ###up()
 #####Description
 Wakes-up the AD9850 from power down mode.
