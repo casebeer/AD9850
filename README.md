@@ -55,7 +55,7 @@ void setup(){
 }
 ```
 
-### calibrate(double trim_frequency)
+### `calibrate(double trim_frequency)`
 ##### Description
 
 Compensation of crystal oscillator frequency.<br>
@@ -65,7 +65,7 @@ Can be used at any time after initialization.
 
 `DDS.calibrate(trim_freq);`
 
-#####Parameters
+##### Parameters
 
 **trim_freq :** Adjust around 125000000 to match the real crystal oscillator frequency. *(double)*
 
